@@ -1,0 +1,84 @@
+body {
+    background: var(--main-background);
+    height: 100%;
+}
+
+.buy-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 32px;
+    background-color: var(--dark-orange);
+    color: white;
+    border-radius: 20px;
+}
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    color: white;
+    background: rgba(255,255,255,0.25);
+}
+
+.event-screen{
+    display: flex;
+    justify-content:center ;
+    width: 100vw;
+    margin: 16px auto;
+}
+.event-screen img {
+    width: 100vw;
+    margin-top: 48px; 
+    
+}
+
+@media screen and (min-width:1024px){
+    .event-screen img{
+        width: 60vw;
+        margin: 0 auto;
+    }
+}
+
+.insert-emoji-btn {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 62px;
+    background: var(--main-orange);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 16px;      
+}
+
+.emoji-list {
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 0;
+    margin: 16px 0;    
+    overflow: scroll;   
+    transition: all 300ms ease-in; 
+}
+
+.emoji-list.active{
+    height: 100%;
+}
+.event-info {
+    padding: 16px 32px;
+}
+
+.event-info_title {
+    color: white;
+    margin-bottom: 4px;
+}
+.event-info_country {
+    color: white;
+    margin-bottom: 16px;
+}
+.event-info_description {
+    color: white;
+}

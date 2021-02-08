@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --dark-blue: #000B2E;
+	--king-blue:#364987;
+	--light-blue: #00B6ED;
+	--main-orange: #F07B3C;
+	--dark-orange:#BA3713;
+	--main-background: linear-gradient(#000B2E, #2A2C31);
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    width: 100vw;
+}
+.header-section {
+    position: relative;
+    background: var(--main-background);
+    width: 100vw;    
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px;
+}
+.header-logo{
+    color: white;
+    font-weight: 700;
+}
+
+.header-side-nav{
+    cursor: pointer;
+}
+
+.header-side-nav_options{
+    position:absolute ;
+    background-color: white;
+    right: 0;
+    left: 0; 
+    height: auto;
+    z-index: 111;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 300ms ease-in;
+}
+.side-nav-visible{
+    transform: scaleY(1);
+}
+
+.side-nav-optionlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+}
+.nav-item{
+    display: flex;
+    justify-items: center;
+    margin-bottom: 4px;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+}
+.nav-item span {
+    margin: 0 auto;
+    width: inherit; 
+    color: white;
+    font-family: inherit;
+    font-weight: 700;   
+}
+
+.user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 16px;    
+}
+
+.user-section_profile {
+    cursor: pointer;
+}
+.user-section_profile:active{
+    transform: scale(0.95);
+}
+.user-section_notifications {
+    padding-right: 16px;
+}
+
+.user-section_options{
+    position: absolute;
+    background-color:rgba(0, 11, 46, 0.9);
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+    color: var(--main-orange);
+    top: 0;
+    width: auto;
+    height: 100vh;
+    padding: 60px;
+    left:0;
+    z-index: 100;
+    overflow: hidden;    
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: transform 300ms ease-in;
+}
+.user-section_options.visible{
+    transform: scaleX(1);   
+}
+.exit-btn{
+    color: white;
+    margin-top: 32px;
+}
+.user-page{
+    margin-bottom: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    transition-delay: 100ms;
+    
+}
+.user-section_options.visible .user-page {
+    opacity: 1;
+}
+.user-page i{
+    margin-right: 16px;
+}
+.user-page:hover{
+    color: white;
+}
+
+.next-events-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 32px;
+}
+.next-events-title {
+    color: white;
+}
+.next-events-action {
+    color: var(--main-orange);
+    cursor: pointer;
+}
+.search{
+    color: var(--king-blue);
+    width: 230px;
+    height: 30px;
+    border:none;
+    border-radius: 8px;
+    outline: none;
+    padding:4px 32px;
+}
+.search::placeholder {
+    color:#C8C7C7;
+    margin-right: 8px;
+}
+.search:focus {
+    border: 2px solid var(--main-orange);
+}
+ 
+.next-event-container{
+    display: flex;
+    margin: 16px 32px;
+    padding: 16px 32px;
+    padding-bottom: 32px;
+    overflow-x: scroll;
+}
+.next-event-card {
+    display: flex;   
+    width: auto;
+    height: 170px;
+    background: url("./assets/next-e-01.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 18px;
+    padding: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.next-event-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 4px;
+    margin-bottom: 0;
+    color: white;
+}
+.next-event-card h3, .next-event-card h5 {
+    margin: 4px;
+    color: white;
+}   
+
+.next-event-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left:16px ;
+}
+.next-event-icons img {
+    width: 24px;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.next-event-icons button {
+    color: white;
+    background-color: var(--dark-orange);
+    padding: 8px;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.catalog-section {
+    /* padding:16px 32px; */
+    width: 100vw;
+    
+}
+.catalog-section h2 {
+    padding: 16px;
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding: 0 16px;
+}
+.category {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    color: white;
+    min-width:80px;
+    height: 20px;
+    border-radius:50px ;
+    font-size: 12px;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    
+}
+.classic {
+    background-color: var(--dark-blue);
+}
+.electronic {
+    background-color: var(--main-orange);
+}
+.rock {
+    background-color: var(--light-blue);
+}
+.jazz {
+    background-color: var(--dark-orange);
+}
+.pop {
+    background-color: var(--king-blue);
+}
+
+.overflow {
+    overflow-y: scroll;
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+
+.events-container {
+    display: flex;
+    
+}
+
+.event-card {
+    min-width: 120px;
+    height: 200px;
+    background: url('./assets/event01.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    border-radius: 16px;
+    position: relative;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    cursor: pointer;
+    
+}
+.event-text-container {
+    position: absolute;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 40px;
+    bottom: 0;
+    border-radius: 0 0 16px 16px;
+    background: var(--main-orange);
+    opacity: 0.75;
+    margin: 0 auto;
+    padding-bottom:8px ;
+}
+
+.event-title {
+    color: white;
+    font-size: 10px;
+    margin-left: 8px;
+    margin-bottom: 0;    
+}
+.event-timer span{
+    margin-right:8px ;   
+}
+.event-timer{
+    margin-top: 4px;
+    margin-left: 8px;
+    font-size: 10px;
+    color: white;
+}
+
+.collection-btn {
+    width: 100%;
+    background-color: var(--dark-orange);
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.collection-btn:active {
+    background-color: var(--main-orange);
+}
+
+
+

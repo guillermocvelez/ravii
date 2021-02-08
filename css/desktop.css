@@ -1,0 +1,36 @@
+/* .header-side-nav {
+    display: none;
+} */
+.search {
+    width: 60vw;
+}
+
+.header {
+    padding: 16px 48px;
+}
+.user-section{
+    padding: 16px 48px;
+}
+.next-events-section {
+    padding: 16px 48px;
+}
+.next-event-container {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.emoji-list {
+    width: 100vw;
+    height: 290px;
+}
+
+.event-screen{
+    width: 70vh;
+}
+.events-container {
+    display: flex;
+    justify-content:center ;
+    
+}
